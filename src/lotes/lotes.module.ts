@@ -8,6 +8,6 @@ import { LotesService } from './lotes.service';
   imports: [TypeOrmModule.forFeature([Lote])],
   controllers: [LotesController],
   providers: [LotesService],
-  exports: [LotesService] // Exportamos para usar em outros módulos
+  exports: [LotesService] 
 })
 export class LotesModule {}

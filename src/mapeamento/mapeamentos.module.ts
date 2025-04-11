@@ -8,10 +8,10 @@ import { LotesModule } from '../lotes/lotes.module';
 @Module({
   imports: [
     TypeOrmModule.forFeature([Mapeamento]),
-    LotesModule // Importamos LotesModule para usar LotesService
+    LotesModule 
   ],
   controllers: [MapeamentosController],
   providers: [MapeamentosService],
-  exports: [MapeamentosService] // Exportamos para usar em outros módulos
+  exports: [MapeamentosService] 
 })
 export class MapeamentosModule {}
