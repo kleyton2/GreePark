@@ -5,11 +5,11 @@ import { BoletosController } from './boletos.controller';
 import { BoletosService } from './boletos.service';
 import { CsvService } from './csv.service';
 import { PdfService } from './pdf.service';
-import { Lote } from '../lotes/lote.entity';
+import { Lotes } from '../lotes/lote.entity';
 import { Mapeamento } from '../mapeamento/mapeamento.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Boleto, Lote, Mapeamento])],
+  imports: [TypeOrmModule.forFeature([Boleto, Lotes, Mapeamento])],
   controllers: [BoletosController],
   providers: [BoletosService, CsvService, PdfService],
 })

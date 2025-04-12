@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Boleto } from './boleto.entity';
-import { Lote } from '../lotes/lote.entity';
+import { Lotes } from '../lotes/lote.entity';
 import { Mapeamento } from '../mapeamento/mapeamento.entity';
 import { Repository, Between, Like } from 'typeorm';
 import { PDFDocument } from 'pdf-lib';
@@ -12,8 +12,8 @@ export class BoletosService {
     @InjectRepository(Boleto)
     private readonly boletoRepository: Repository<Boleto>,
     
-    @InjectRepository(Lote)
-    private readonly loteRepository: Repository<Lote>,
+    @InjectRepository(Lotes)
+    private readonly loteRepository: Repository<Lotes>,
     
     @InjectRepository(Mapeamento)
     private readonly mapeamentoRepository: Repository<Mapeamento>,

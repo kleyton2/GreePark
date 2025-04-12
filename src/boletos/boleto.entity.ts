@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { Lote } from '../lotes/lote.entity';
+import { Lotes } from '../lotes/lote.entity';
 
 @Entity()
 export class Boleto {
@@ -9,8 +9,8 @@ export class Boleto {
   @Column({ length: 255 })
   nome_sacado: string;
 
-  @ManyToOne(() => Lote, (lote) => lote.boletos)
-  lote: Lote;
+  @ManyToOne(() => Lotes, (lotes) => lotes.boletos)
+  lote: Lotes;
 
   @Column({ type: 'decimal', precision: 10, scale: 2 })
   valor: number;
